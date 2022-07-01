@@ -132,7 +132,7 @@ below is boot loader project , ICP programming setting
 
 in Application project , press 'z' , 'Z' will reset to Boot loader 
 
-![image](https://github.com/released/NUC131BSP_ISP_UART_APROM/blob/main/APROM_press_Z.jpg)
+![image](https://github.com/released/NUC131BSP_ISP_UART_APROM/blob/main/APROM_press_Z_to_LDROM.jpg)
 
 8. under boot loader project , below is sct file content
 
