@@ -208,8 +208,9 @@ int ParseCmd(unsigned char *buffer, uint8_t len)
     } else if ((lcmd == CMD_UPDATE_APROM) || (lcmd == CMD_ERASE_ALL)) {
         EraseAP(FMC_APROM_BASE, (g_apromSize < g_dataFlashAddr) ? g_apromSize : g_dataFlashAddr);
 
-        if (lcmd == CMD_ERASE_ALL) { //erase APROM + data flash
-            EraseAP(g_dataFlashAddr, g_dataFlashAddr + g_dataFlashSize);
+        if (lcmd == CMD_ERASE_ALL)
+        {
+            EraseAP(g_dataFlashAddr, g_dataFlashSize);
             *(uint32_t *)(response + 8) = regcnf0 | 0x02;
             UpdateConfig((uint32_t *)(response + 8), NULL);
         }
